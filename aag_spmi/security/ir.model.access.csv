@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_aag_spmi_aag_spmi,aag_spmi.aag_spmi,model_aag_spmi_aag_spmi,base.group_user,1,1,1,1
