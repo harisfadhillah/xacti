@@ -42,6 +42,7 @@ class employee(models.Model):
     ]
 
 """test by evans"""
+"""test by haris"""
 
 class contract(models.Model):
     _name = 'hr.contract'
