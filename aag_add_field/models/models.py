@@ -41,6 +41,9 @@ class employee(models.Model):
          'NPWP tidak boleh duplicate - must unique!'),
     ]
 
+
+
+
 class contract(models.Model):
     _name = 'hr.contract'
     _inherit = 'hr.contract'
