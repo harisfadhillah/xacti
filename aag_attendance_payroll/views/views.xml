@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="aag_attendance_payroll.list">
+      <field name="name">aag_attendance_payroll list</field>
+      <field name="model">aag_attendance_payroll.aag_attendance_payroll</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="aag_attendance_payroll.action_window">
+      <field name="name">aag_attendance_payroll window</field>
+      <field name="res_model">aag_attendance_payroll.aag_attendance_payroll</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="aag_attendance_payroll.action_server">
+      <field name="name">aag_attendance_payroll server</field>
+      <field name="model_id" ref="model_aag_attendance_payroll_aag_attendance_payroll"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="aag_attendance_payroll" id="aag_attendance_payroll.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="aag_attendance_payroll.menu_1" parent="aag_attendance_payroll.menu_root"/>
+    <menuitem name="Menu 2" id="aag_attendance_payroll.menu_2" parent="aag_attendance_payroll.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="aag_attendance_payroll.menu_1_list" parent="aag_attendance_payroll.menu_1"
+              action="aag_attendance_payroll.action_window"/>
+    <menuitem name="Server to list" id="aag_attendance_payroll" parent="aag_attendance_payroll.menu_2"
+              action="aag_attendance_payroll.action_server"/>
+-->
+  </data>
+</odoo>

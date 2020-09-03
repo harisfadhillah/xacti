@@ -1,0 +1,104 @@
+<odoo>
+    <data>
+        <record id="rule_tunj_gol" model="hr.salary.rule">
+            <field name="name">Tunjangan Golongan</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_GOL</field>
+            <field name="sequence">10</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_occup</field>
+        </record>
+        <record id="rule_tunj_fungsional" model="hr.salary.rule">
+            <field name="name">Tunjangan Fungsional</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_Func</field>
+            <field name="sequence">20</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_functional</field>
+        </record>
+        <record id="rule_tunj_keluarga" model="hr.salary.rule">
+            <field name="name">Tunjangan Keluarga</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_Fam</field>
+            <field name="sequence">30</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_family</field>
+        </record>
+        <record id="rule_tunj_performance" model="hr.salary.rule">
+            <field name="name">Tunjangan Performance</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_Perf</field>
+            <field name="sequence">40</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_perform</field>
+        </record>
+        <record id="rule_tunj_transportasi" model="hr.salary.rule">
+            <field name="name">Tunjangan Transportasi</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_Trans</field>
+            <field name="sequence">50</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_trans</field>
+        </record>
+        <record id="rule_tunj_lainlain" model="hr.salary.rule">
+            <field name="name">Tunjangan Lain-Lain</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_Lain_lain</field>
+            <field name="sequence">60</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_other</field>
+        </record>
+        <record id="rule_tunj_kehadiran" model="hr.salary.rule">
+            <field name="name">Tunjangan Kehadiran</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TJ_Kehadiran</field>
+            <field name="sequence">70</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_presence</field>
+        </record>
+        <record id="rule_tpk" model="hr.salary.rule">
+            <field name="name">TPK</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TPK</field>
+            <field name="sequence">80</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_tpk</field>
+        </record>
+
+        <record id="rule_tunj_shift" model="hr.salary.rule">
+            <field name="name">Tunj Shift</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">TSHIFT</field>
+            <field name="sequence">80</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_shift</field>
+        </record>
+
+        <record id="rule_uang_makan" model="hr.salary.rule">
+            <field name="name">Uang makan</field>
+            <field name="category_id" ref="hr_payroll_community.ALW"/>
+            <field name="code">MEAL</field>
+            <field name="sequence">80</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=contract.x_meal</field>
+        </record>
+
+
+        <record id="structurexacti_karyawan_tetap_ns" model="hr.payroll.structure">
+            <field name="name">Karyawan tetap NS</field>
+            <field name="parent_id" ref="hr_payroll_community.structure_base"/>
+            <field name="code">KTNS</field>
+            <field name="rule_ids" eval="[(6,0,[ref('rule_tunj_gol'),
+            ref('rule_tunj_fungsional'),
+            ref('rule_tunj_keluarga'),
+            ref('rule_tunj_performance'),
+            ref('rule_tunj_transportasi'),
+            ref('rule_tunj_lainlain'),
+            ref('rule_tunj_kehadiran'),
+            ref('rule_tpk'),
+            ref('rule_tunj_shift'),
+            ref('rule_uang_makan')
+            ])]"/>
+        </record>
+    </data>
+</odoo>
