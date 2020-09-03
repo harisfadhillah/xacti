@@ -41,8 +41,7 @@ class employee(models.Model):
          'NPWP tidak boleh duplicate - must unique!'),
     ]
 
-
-
+"""test by evans"""
 
 class contract(models.Model):
     _name = 'hr.contract'
