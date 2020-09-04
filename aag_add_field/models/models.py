@@ -9,6 +9,8 @@ class employee(models.Model):
     x_idno = fields.Integer(string='IDNO')
     x_allcd = fields.Char(string='Code Golongan')
     x_spmi = fields.Boolean(string='SPMI')
+    x_empsts = fields.Char(string='Empl. Status')
+    x_spmi_med = fields.Integer(string='SPMI Med')
     x_nokop = fields.Char(string='NO Koperasi')
     x_nobpjskes = fields.Char(string='NO BPJSKES')
     x_bpjskesadd = fields.Integer(string='Tambahan BPJS KES')
@@ -39,6 +41,7 @@ class employee(models.Model):
          'NPWP tidak boleh duplicate - must unique!'),
     ]
 
+
 class contract(models.Model):
     _name = 'hr.contract'
     _inherit = 'hr.contract'
@@ -50,3 +53,10 @@ class contract(models.Model):
     x_perform = fields.Integer(string='Tunj. Prestasi')
     x_other = fields.Integer(string='Lain-Lain')
     x_presence = fields.Integer(string='Tunj. Kehadiran')
+    x_shift = fields.Integer(string='Tunj. Shift/Harian')
+    x_ovtrate = fields.Integer(string='Rate Overtime/Jam')
+
+class company(models.Model):
+    _name = 'res.company'
+    _inherit = 'res.company'
+    x_meal = fields.Integer(string='Uang makan/hari')
