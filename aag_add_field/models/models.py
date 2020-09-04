@@ -7,9 +7,9 @@ class employee(models.Model):
     _name = 'hr.employee'
     _inherit = 'hr.employee'
     x_idno = fields.Integer(string='IDNO')
+    x_empsts = fields.Char(string='Empl. Status')
     x_allcd = fields.Char(string='Code Golongan')
     x_spmi = fields.Boolean(string='SPMI')
-    x_empsts = fields.Char(string='Empl. Status')
     x_spmi_med = fields.Integer(string='SPMI Med')
     x_nokop = fields.Char(string='NO Koperasi')
     x_nobpjskes = fields.Char(string='NO BPJSKES')
@@ -41,6 +41,8 @@ class employee(models.Model):
          'NPWP tidak boleh duplicate - must unique!'),
     ]
 
+"""test by evans"""
+"""test by haris"""
 
 class contract(models.Model):
     _name = 'hr.contract'

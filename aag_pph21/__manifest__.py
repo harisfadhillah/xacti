@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "aag_PPh21",
+    'name': "aag_add_field",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -24,15 +24,10 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
+        # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/master_ptkp.xml',
-        'views/views_pkp.xml',
-        'views/master_pkp.xml',
-        'views/employee.xml',
-        'views/company.xml',
-        # 'views/structure_xacti.xml',
+        'views/structure_xacti.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

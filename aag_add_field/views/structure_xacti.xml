@@ -56,8 +56,6 @@
             <field name="amount_select">code</field>
             <field name="amount_python_compute">result=contract.x_presence</field>
         </record>
-<<<<<<< HEAD
-=======
         <record id="rule_tpk" model="hr.salary.rule">
             <field name="name">TPK</field>
             <field name="category_id" ref="hr_payroll_community.ALW"/>
@@ -85,7 +83,6 @@
             <field name="amount_python_compute">result=contract.x_meal</field>
         </record>
 
->>>>>>> 4eed391260bbfb9d9751d33f86a17c7bd24102a4
 
         <record id="structurexacti_karyawan_tetap_ns" model="hr.payroll.structure">
             <field name="name">Karyawan tetap NS</field>
@@ -97,14 +94,10 @@
             ref('rule_tunj_performance'),
             ref('rule_tunj_transportasi'),
             ref('rule_tunj_lainlain'),
-<<<<<<< HEAD
-            ref('rule_tunj_kehadiran')
-=======
             ref('rule_tunj_kehadiran'),
             ref('rule_tpk'),
             ref('rule_tunj_shift'),
             ref('rule_uang_makan')
->>>>>>> 4eed391260bbfb9d9751d33f86a17c7bd24102a4
             ])]"/>
         </record>
     </data>
