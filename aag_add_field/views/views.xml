@@ -16,10 +16,7 @@
                 <field name="x_idno"/>
                 <field name="x_allcd"/>
                 <field name="x_spmi"/>
-<<<<<<< HEAD
-=======
                 <field name="x_spmi_med"/>
->>>>>>> 4eed391260bbfb9d9751d33f86a17c7bd24102a4
                 <field name="x_nokop"/>
                 <field name="x_nobpjskes"/>
                 <field name="x_bpjskesadd"/>
@@ -60,8 +57,6 @@
       </field>
     </record>
 
-<<<<<<< HEAD
-=======
   <record model="ir.ui.view" id="company_add">
       <field name="name">company_add</field>
       <field name="model">res.company</field>
@@ -80,7 +75,6 @@
       </field>
     </record>
 
->>>>>>> 4eed391260bbfb9d9751d33f86a17c7bd24102a4
 
     <!-- actions opening views on models -->
 <!--
