@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="master_ptkp_tk0" model="aag_master_ptkp">
+            <field name="name">TK/0</field>
+            <field name="nominal">54000000</field>
+        </record>
+        <record id="master_ptkp_tk1" model="aag_master_ptkp">
+            <field name="name">TK/1</field>
+            <field name="nominal">58500000</field>
+        </record>
+        <record id="master_ptkp_tk2" model="aag_master_ptkp">
+            <field name="name">TK/2</field>
+            <field name="nominal">63000000</field>
+        </record>
+        <record id="master_ptkp_tk3" model="aag_master_ptkp">
+            <field name="name">TK/3</field>
+            <field name="nominal">67500000</field>
+        </record>
+        <record id="master_ptkp_k0" model="aag_master_ptkp">
+            <field name="name">K/0</field>
+            <field name="nominal">58500000</field>
+        </record>
+        <record id="master_ptkp_k1" model="aag_master_ptkp">
+            <field name="name">TK/1</field>
+            <field name="nominal">63000000</field>
+        </record>
+        <record id="master_ptkp_k2" model="aag_master_ptkp">
+            <field name="name">K/2</field>
+            <field name="nominal">67500000</field>
+        </record>
+        <record id="master_ptkp_k3" model="aag_master_ptkp">
+            <field name="name">K/3</field>
+            <field name="nominal">72000000</field>
+        </record>
+    </data>
+</odoo>

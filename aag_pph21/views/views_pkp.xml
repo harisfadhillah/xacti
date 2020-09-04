@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+    
+    <record model="ir.ui.view" id="aag_master_pkp_tree">
+      <field name="name">aag_master_pkp_tree</field>
+      <field name="model">aag_master_pkp</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="rate"/>
+          <field name="minimum"/>
+          <field name="maximum"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_master_pkp">
+      <field name="name">master_pkp</field>
+      <field name="res_model">aag_master_pkp</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Master pkp" id="master_pkp" parent="hr_payroll_community.menu_hr_payroll_community_configuration"
+              sequence="30"
+              action="action_master_pkp"/>
+
+
+  </data>
+</odoo>

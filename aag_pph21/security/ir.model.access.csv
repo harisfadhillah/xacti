@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+master_ptkp,master_ptkp,model_aag_master_ptkp,,1,1,1,1
+master_pkp,master_pkp,model_aag_master_pkp,,1,1,1,1

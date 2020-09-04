@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="company_pkp">
+            <field name="name">company_pkp</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <notebook position = 'inside'>
+                    <page string="PPh21">
+
+                            <field name="pkp_ids"/>
+
+
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -10,9 +10,48 @@
 
       <field name="arch" type="xml">
 
-          <field name="department_id" position = 'before'>
-            <field name="idno"/>
-          </field>
+          <notebook position = 'inside'>
+            <page string="xacti_field">
+              <group>
+                <field name="x_idno"/>
+                <field name="x_allcd"/>
+                <field name="x_spmi"/>
+                <field name="x_nokop"/>
+                <field name="x_nobpjskes"/>
+                <field name="x_bpjskesadd"/>
+                <field name="x_nobpjstk"/>
+                <field name="x_nobpjspen"/>
+                <field name="x_npwp"/>
+              </group>
+            </page>
+          </notebook>
+
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="contract_add">
+      <field name="name">contract_add</field>
+      <field name="model">hr.contract</field>
+      <field name="inherit_id"
+      ref="hr_contract.hr_contract_view_form"/>
+
+      <field name="arch" type="xml">
+
+          <notebook position = 'inside'>
+            <page string="Xacti Contract field">
+              <group>
+                <field name="x_tpk"/>
+                <field name="x_occup"/>
+                <field name="x_family"/>
+                <field name="x_functional"/>
+                <field name="x_trans"/>
+                <field name="x_perform"/>
+                <field name="x_other"/>
+                <field name="x_presence"/>
+              </group>
+            </page>
+          </notebook>
 
       </field>
     </record>

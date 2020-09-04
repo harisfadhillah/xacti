@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="master_pkp_1" model="aag_master_pkp">
+            <field name="minimum">0</field>
+            <field name="maximum">50000000</field>
+            <field name="rate">5</field>
+            <field name="company_id" ref="base.main_company"></field>
+
+        </record>
+        <record id="master_pkp_2" model="aag_master_pkp">
+            <field name="minimum">50000001</field>
+            <field name="maximum">250000000</field>
+            <field name="rate">15</field>
+            <field name="company_id" ref="base.main_company"></field>
+
+        </record>
+        <record id="master_pkp_3" model="aag_master_pkp">
+            <field name="minimum">250000001</field>
+            <field name="maximum">500000000</field>
+            <field name="rate">25</field>
+            <field name="company_id" ref="base.main_company"></field>
+        </record>
+
+    </data>
+</odoo>

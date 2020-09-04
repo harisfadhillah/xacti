@@ -22,12 +22,14 @@ class hr_payslip(models.Model):
         """
         [  { 'name':'Normal Working Days paid at 100%',
              'code':'WORK100',
+             'number_of_days':21
              ........
             } 
         ]
         """
 
         presence = self.get_presence()
+        absences = self.get_absences(res,presence)
 
         res.append({
             'name': 'Presences', 
@@ -37,14 +39,14 @@ class hr_payslip(models.Model):
             'number_of_hours': 0.0, 
             'contract_id': self.contract_id.id })
 
+
         res.append({
             'name': 'Absences', 
             'sequence': 30, 
             'code': 'ABS', 
-            'number_of_days': 3.0, 
+            'number_of_days': absences,
             'number_of_hours': 0.0, 
             'contract_id': self.contract_id.id })
-
 
         return res 
         
@@ -65,6 +67,14 @@ class hr_payslip(models.Model):
 
         return res[0]
 
+    def get_absences(self, res, presence):
+        """cari jumlah ke tidakhadiran employee self.employee_id"""
+        """jumlah hari kerja dikurang jumlah kehadiran adalah absense"""
+        if res:
+            number_of_days=res[0]['number_of_days']
+        else:
+            number_of_days=0
+        return number_of_days-presence
 
 
 # class aag_payroll(models.Model):
