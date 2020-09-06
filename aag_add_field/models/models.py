@@ -8,19 +8,17 @@ class employee(models.Model):
     _inherit = 'hr.employee'
     x_idno = fields.Integer(string='IDNO')
     x_empsts = fields.Char(string='Empl. Status')
-    x_allcd = fields.Char(string='Code Golongan')
-    x_spmi = fields.Boolean(string='SPMI')
+    x_allcd = fields.Char(string='Kode Golongan')
+    x_spmi = fields.Boolean(string='SPMI Member')
     x_spmi_med = fields.Integer(string='SPMI Med')
-    x_nokop = fields.Char(string='NO Koperasi')
-    x_nobpjskes = fields.Char(string='NO BPJSKES')
-    x_bpjskesadd = fields.Integer(string='Tambahan BPJS KES')
-    x_nobpjstk = fields.Char(string='NO BPJSTK')
-    x_nobpjspen = fields.Char(string='NO BPJS Pensiun')
+    x_nokop = fields.Char(string='No Koperasi')
+    x_nobpjskes = fields.Char(string='No BPJS-Kes')
+    x_bpjskesadd = fields.Integer(string='Tambahan BPJS-Kes')
+    x_nobpjstk = fields.Char(string='No BPJS-TK')
+    x_nobpjspen = fields.Char(string='No BPJS-Pensiun')
     x_npwp = fields.Char(string='NPWP')
 
-    idno = fields.Integer(string='IDNO')
-
-    _sql_constraints = [
+      _sql_constraints = [
         ('x_idno_unique',
          'unique(x_idno)',
         'IDNO tidak boleh duplicate - must unique!'),
